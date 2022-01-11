@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven
+Built-By: hp
+Build-Jdk: 11.0.12
+Implementation-Title: Audi - UI content
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.moonraft
+Content-Package-Roots: /conf/audi,/content/audi,/content/dam/audi,/conte
+ nt/experience-fragments/audi
+Content-Package-Description: UI content package for Audi
+Content-Package-Dependencies: com.moonraft:audi-aem-project.ui.apps:0.0.
+ 1-SNAPSHOT
+Content-Package-Id: com.moonraft:audi-aem-project.ui.content:0.0.1-SNAPS
+ HOT
+Content-Package-Type: content
+

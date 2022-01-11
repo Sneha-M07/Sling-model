@@ -1,0 +1,31 @@
+<div>student details</div>
+
+<div data-sly-use.model="com.moonraft.core.models.StudentDetailsImpl">
+    <p>Model -Student Details</p>
+    <ul data-sly-list.a="${model.studentDetailsWithMap}">
+        <li>Name: ${a.studentname}</li>
+        <li>Phone Numbers:
+            <ul data-sly-list.b="${a.phone}">
+                <li>Phone numbers: ${b.phonenumber}</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div data-sly-list.swm="${resource.getChildren}">
+  <div data-sly-test="${swm.name == 'studentdetailswithmap'}">
+        <p>Htl - StudentDetails</p>
+      <ul data-sly-list.a="${swm.getChildren}">
+         <li>Name: ${a.studentname}</li>
+         <li>Phone:
+             <div data-sly-list.swm="${a.getChildren}">
+              <ul data-sly-test="${swm.name == 'phone'}"
+                        data-sly-list.b="${swm.getChildren}">
+                    <li>Phone Number: ${b.phonenumber}</li>
+               </ul>
+             </div>
+         </li>
+      </ul>
+  </div>
+</div>
+

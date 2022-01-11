@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Audi - All</comment>
+<entry key="allowIndexDefinitions">false</entry>
+<entry key="createdBy">hp</entry>
+<entry key="created">2022-01-10T21:55:08.836-08:00</entry>
+<entry key="groupId">com.moonraft</entry>
+<entry key="name">audi-aem-project.all</entry>
+<entry key="description">All content package for Audi</entry>
+<entry key="artifactId">audi-aem-project.all</entry>
+<entry key="version">0.0.1-SNAPSHOT</entry>
+<entry key="packageType">application</entry>
+<entry key="requiresRoot">false</entry>
+<entry key="group">com.moonraft</entry>
+</properties>

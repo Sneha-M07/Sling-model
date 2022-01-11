@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven
+Built-By: hp
+Build-Jdk: 11.0.12
+Implementation-Title: Audi - All
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.moonraft
+Content-Package-Roots: /apps/audi-packages,/apps/audi-vendor-packages
+Content-Package-Description: All content package for Audi
+Content-Package-Id: com.moonraft:audi-aem-project.all:0.0.1-SNAPSHOT
+Content-Package-Type: application
+

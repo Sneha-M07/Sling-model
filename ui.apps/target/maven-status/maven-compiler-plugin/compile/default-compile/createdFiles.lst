@@ -1,0 +1,9 @@
+org\apache\sling\scripting\sightly\apps\audi\components\content\studentdetails\studentdetails_html.class
+org\apache\sling\scripting\sightly\apps\audi\components\content\heroimage\heroimage_html.class
+org\apache\sling\scripting\sightly\apps\audi\components\content\card\card_html.class
+org\apache\sling\scripting\sightly\apps\audi\components\helloworld\helloworld_html.class
+org\apache\sling\scripting\sightly\apps\audi\components\xfpage\customheaderlibs_html.class
+org\apache\sling\scripting\sightly\apps\audi\components\xfpage\customfooterlibs_html.class
+org\apache\sling\scripting\sightly\apps\audi\components\page\customheaderlibs_html.class
+org\apache\sling\scripting\sightly\apps\audi\components\xfpage\content_html.class
+org\apache\sling\scripting\sightly\apps\audi\components\page\customfooterlibs_html.class
