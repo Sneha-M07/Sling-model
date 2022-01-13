@@ -1,5 +1,6 @@
 package com.moonraft.core.models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -18,4 +19,10 @@ public class Student {
 	@Inject
     private List<PhoneNumbersImpl> phone;
 	
+	public String getStudentName() {
+		return studentname;
+	}
+	public List<PhoneNumbersImpl> getPhone(){
+		return new ArrayList<>(phone);
+	}
 }

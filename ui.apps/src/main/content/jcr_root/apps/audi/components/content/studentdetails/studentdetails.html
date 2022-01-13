@@ -3,10 +3,10 @@
 <div data-sly-use.model="com.moonraft.core.models.StudentDetailsImpl">
     <p>Model -Student Details</p>
     <ul data-sly-list.a="${model.studentDetailsWithMap}">
-        <li>Name: ${a.studentname}</li>
+        <li>Name: ${a.studentName}</li>
         <li>Phone Numbers:
             <ul data-sly-list.b="${a.phone}">
-                <li>Phone numbers: ${b.phonenumber}</li>
+                <li>Phone numbers: ${b.phoneNumber}</li>
             </ul>
         </li>
     </ul>

@@ -13,4 +13,8 @@ public class PhoneNumbersImpl{
 	
 	@Inject
     public String phonenumber;
+	
+	public String getPhoneNumber() {
+		return phonenumber;
+	}
 }

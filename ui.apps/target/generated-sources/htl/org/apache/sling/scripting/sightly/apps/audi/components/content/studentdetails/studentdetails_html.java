@@ -68,7 +68,7 @@ out.write("<div>\n    <p>Model -Student Details</p>\n    ");
                                     if (var_traversal9) {
                                         out.write("\n        <li>");
                                         {
-                                            String var_10 = ("Name: " + renderContext.getObjectModel().toString(renderContext.call("xss", renderContext.getObjectModel().resolveProperty(a, "studentname"), "text")));
+                                            String var_10 = ("Name: " + renderContext.getObjectModel().toString(renderContext.call("xss", renderContext.getObjectModel().resolveProperty(a, "studentName"), "text")));
                                             out.write(renderContext.getObjectModel().toString(var_10));
                                         }
                                         out.write("</li>\n        <li>Phone Numbers:\n            ");
@@ -95,7 +95,7 @@ out.write("<div>\n    <p>Model -Student Details</p>\n    ");
                                                                             if (var_traversal20) {
                                                                                 out.write("\n                <li>");
                                                                                 {
-                                                                                    String var_21 = ("Phone numbers: " + renderContext.getObjectModel().toString(renderContext.call("xss", renderContext.getObjectModel().resolveProperty(b, "phonenumber"), "text")));
+                                                                                    String var_21 = ("Phone numbers: " + renderContext.getObjectModel().toString(renderContext.call("xss", renderContext.getObjectModel().resolveProperty(b, "phoneNumber"), "text")));
                                                                                     out.write(renderContext.getObjectModel().toString(var_21));
                                                                                 }
                                                                                 out.write("</li>\n            ");

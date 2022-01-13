@@ -15,9 +15,6 @@ import org.apache.sling.models.annotations.*;
 public class StudentDetailsImpl implements StudentDetails{
 	
 	 @Inject
-	 Resource componentResource;
-	 
-	 @Inject
 	 public List<Student> studentdetailswithmap;
 	 
 	 public List<Student> getStudentDetailsWithMap(){

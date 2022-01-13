@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Template">
+    <jcr:content
+        cq:lastModified="{Date}2022-01-13T04:33:10.287-08:00"
+        cq:lastModifiedBy="admin"
+        cq:templateType="/conf/audi/settings/wcm/template-types/t2"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="demotemplate2"
+        status="enabled"/>
+</jcr:root>

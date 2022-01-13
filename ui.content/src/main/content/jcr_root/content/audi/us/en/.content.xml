@@ -79,4 +79,11 @@
             </container>
         </root>
     </jcr:content>
+    <demopage1/>
+    <demopage2/>
+    <demopage3/>
+    <demopage4/>
+    <demopage5/>
+    <demopage6/>
+    <demopage7/>
 </jcr:root>
