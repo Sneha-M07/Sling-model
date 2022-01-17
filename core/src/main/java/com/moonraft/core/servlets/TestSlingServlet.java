@@ -28,10 +28,15 @@ public class TestSlingServlet extends SlingSafeMethodsServlet{
 	@Override
     protected void doGet(final SlingHttpServletRequest req, final SlingHttpServletResponse resp) throws ServletException, IOException {
         final ResourceResolver resourceResolver = req.getResourceResolver();
-        Page page = resourceResolver.adaptTo(PageManager.class).getPage("/content/audi/us/en");
+        String callingPage = req.getParameter("callingPage");
+        Page page = resourceResolver.adaptTo(PageManager.class).getPage(callingPage);
         JSONArray pagesArray = new JSONArray();
-       try {
-            Iterator<Page> childPages = page.listChildren();
+        try {
+    	   JSONObject pageObject1 = new JSONObject();
+    	   pageObject1.put("Parent Page Title",page.getTitle().toString());
+    	   pageObject1.put("Parent Page Template Type",page.getTemplate().getProperties().get("cq:templateType", "Default template type"));
+           pagesArray.put(pageObject1);
+            Iterator<Page> childPages = page.listChildren(null, true);
             while (childPages.hasNext()) {
                 Page childPage = childPages.next();
                 JSONObject pageObject = new JSONObject();
@@ -40,6 +45,7 @@ public class TestSlingServlet extends SlingSafeMethodsServlet{
                // pageObject.put("Template",childPage.getTemplate().getProperties().get(JcrConstants.JCR_TITLE));
                 pageObject.put("Template Type",childPage.getTemplate().getProperties().get("cq:templateType", "Default template type"));
                 pagesArray.put(pageObject);
+               
             }
         } catch (JSONException e) {
            
