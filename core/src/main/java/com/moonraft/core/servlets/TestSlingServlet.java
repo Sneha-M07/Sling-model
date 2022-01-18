@@ -12,6 +12,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.osgi.service.component.annotations.Component;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.Servlet;
 import javax.servlet.ServletException;
@@ -23,16 +25,17 @@ import java.util.Iterator;
         value = {"/bin/pages"}
 )
 public class TestSlingServlet extends SlingSafeMethodsServlet{
-
+	private static final Logger LOG = LoggerFactory.getLogger(TestSlingServlet.class);
 	
 	@Override
     protected void doGet(final SlingHttpServletRequest req, final SlingHttpServletResponse resp) throws ServletException, IOException {
         final ResourceResolver resourceResolver = req.getResourceResolver();
         String callingPage = req.getParameter("callingPage");
-        Page page = resourceResolver.adaptTo(PageManager.class).getPage(callingPage);
-        JSONArray pagesArray = new JSONArray();
+        if(callingPage!=null){
+        	Page page = resourceResolver.adaptTo(PageManager.class).getPage(callingPage);
+            JSONArray pagesArray = new JSONArray();
         try {
-    	   JSONObject pageObject1 = new JSONObject();
+           JSONObject pageObject1 = new JSONObject();
     	   pageObject1.put("Parent Page Title",page.getTitle().toString());
     	   pageObject1.put("Parent Page Template Type",page.getTemplate().getProperties().get("cq:templateType", "Default template type"));
            pagesArray.put(pageObject1);
@@ -47,11 +50,17 @@ public class TestSlingServlet extends SlingSafeMethodsServlet{
                 pagesArray.put(pageObject);
                
             }
-        } catch (JSONException e) {
-           
+            resp.setContentType("application/json");
+            resp.getWriter().write(pagesArray.toString());
+        } catch (Exception e) {
+        	resp.setContentType("text/plain");
+            resp.getWriter().write("Please give correct page path");
+        	LOG.info("\n ERROR {} ", e.getMessage());
+          }   
+       }
+        else {
+        	resp.setContentType("text/plain");
+            resp.getWriter().write("No page path is given");
         }
-        resp.setContentType("application/json");
-        resp.getWriter().write(pagesArray.toString());
-       
     }
 }
