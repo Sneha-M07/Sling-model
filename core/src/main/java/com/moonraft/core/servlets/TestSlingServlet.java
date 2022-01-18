@@ -31,7 +31,7 @@ public class TestSlingServlet extends SlingSafeMethodsServlet{
         final ResourceResolver resourceResolver = req.getResourceResolver();
         String callingPage = req.getParameter("callingPage");
         int pageDepth = Integer.parseInt(req.getParameter("depth"));
-        if(callingPage!=null && pageDepth>0){
+        if(callingPage!=null && pageDepth>=0){
         	Page page = resourceResolver.adaptTo(PageManager.class).getPage(callingPage);
             JSONArray pagesArray = new JSONArray();
         try {
