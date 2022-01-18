@@ -5,6 +5,7 @@
         cq:allowedTemplates="[/conf/audi/settings/wcm/templates/(?!xf-).*]"
         cq:conf="/conf/audi"
         cq:deviceGroups="[/etc/mobile/groups/responsive]"
+        cq:template="/conf/audi/settings/wcm/templates/page-content"
         jcr:primaryType="cq:PageContent"
         jcr:title="Audi"
         sling:redirect="{Boolean}true"
