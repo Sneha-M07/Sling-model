@@ -4,7 +4,7 @@
 <comment>Audi - UI apps</comment>
 <entry key="allowIndexDefinitions">false</entry>
 <entry key="acHandling">merge</entry>
-<entry key="created">2022-01-18T01:48:10.153-08:00</entry>
+<entry key="created">2022-01-18T03:33:52.100-08:00</entry>
 <entry key="groupId">com.moonraft</entry>
 <entry key="description">UI apps package for Audi</entry>
 <entry key="version">0.0.1-SNAPSHOT</entry>
