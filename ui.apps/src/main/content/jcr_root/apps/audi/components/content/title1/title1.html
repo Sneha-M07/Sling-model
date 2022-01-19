@@ -13,4 +13,7 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/-->
-<h1>Title : ${properties.jcr:title}</h1>
+<h1>Title : ${properties.title1}</h1>
+<div data-sly-use.model = "com.moonraft.core.models.OverlayAndOverrideImpl">
+<h1>Title1 : ${model.title1}</h1>
+</div>
