@@ -4,7 +4,7 @@ Bundle-Description: Bundles for Integration Tests for Audi
 Bundle-ManifestVersion: 2
 Bundle-Name: Audi - Integration Tests Bundles
 Bundle-SymbolicName: audi-aem-project.it.tests
-Bundle-Version: 0.0.1.20220119074602957
+Bundle-Version: 0.0.1.20220124081107109
 Export-Package: com.moonraft.it.tests;version="1.0";uses:="org.apache.
  sling.junit.annotations,org.junit,org.junit.runner"
 Import-Package: com.moonraft.core.models;version="[1.0,2)",org.apache.
